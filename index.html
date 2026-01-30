@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Remboursement des consultations psychologiques</title>
+  <style>
+    :root{
+      --page-w: 210mm;
+      --page-h: 297mm;
+      --pad-x: 22mm;
+      --pad-top: 18mm;
+      --pad-bottom: 18mm;
+      --text: #111;
+      --muted: #333;
+      --grid: #d7d7d7;
+      --highlight: #fff45a;
+      --icon-blue: #2b78c5;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      background:#f3f3f3;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+    }
+
+    /* Page container (screen) */
+    .page{
+      width: var(--page-w);
+      min-height: var(--page-h);
+      margin: 14px auto;
+      background:#fff;
+      padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
+      position: relative;
+    }
+
+    /* Print */
+    @media print{
+      body{ background:#fff; }
+      .page{
+        margin:0;
+        width: var(--page-w);
+        min-height: var(--page-h);
+        box-shadow:none;
+        page-break-after: always;
+      }
+      .page:last-child{ page-break-after: auto; }
+    }
+
+    h1{
+      margin: 0 0 18px 0;
+      text-align:center;
+      font-size: 40px;
+      line-height: 1.08;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .lead{
+      margin: 0 auto 20px auto;
+      max-width: 155mm;
+      font-size: 18px;
+      line-height: 1.45;
+      color: var(--muted);
+      text-align: left;
+    }
+    .lead .emph{
+      font-weight: 700;
+      color: #111;
+    }
+
+    h2{
+      margin: 26px 0 16px 0;
+      font-size: 38px;
+      line-height: 1.1;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      border: 2px solid var(--grid);
+      table-layout: fixed;
+      font-size: 20px;
+      color: #111;
+    }
+    th, td{
+      padding: 16px 18px;
+      vertical-align: top;
+    }
+    th{
+      font-weight: 500;
+      text-align: left;
+      border-bottom: 2px solid var(--grid);
+    }
+    /* vertical separators */
+    .vlines th + th, .vlines td + td{
+      border-left: 2px solid var(--grid);
+    }
+
+    .row{ height: 44px; }
+
+    .hl{
+      background: var(--highlight);
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    /* Page 2 title a bit larger & with line break like PDF */
+    .p2title{ margin-top: 12px; }
+
+    /* Page 3 */
+    .info-block{
+      margin-top: 26px;
+      display:flex;
+      align-items:flex-start;
+      gap: 10px;
+    }
+    .info-icon{
+      width: 30px;
+      height: 30px;
+      background: var(--icon-blue);
+      border-radius: 4px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex: 0 0 auto;
+      margin-top: 6px;
+    }
+    .info-icon span{
+      color:#fff;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .info-title{
+      font-size: 40px;
+      font-weight: 800;
+      margin: 0 0 10px 0;
+      line-height: 1.05;
+    }
+    .info-text{
+      font-size: 20px;
+      line-height: 1.55;
+      color: #111;
+      margin: 0;
+      max-width: 160mm;
+    }
+    .info-text .hlpara{
+      background: var(--highlight);
+      padding: 4px 6px;
+      border-radius: 4px;
+      display:inline;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    /* Slight spacing like Canva export */
+    .table-wrap{ margin-top: 6px; }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <section class="page">
+    <h1>Remboursement des consultations<br/>psychologiques</h1>
+
+    <p class="lead">
+      Liste non exhaustive de mutuelles proposant un forfait « psychologie ». <br/>
+      <span class="emph">Les informations ci-dessous sont données à titre indicatif.</span>
+      Les montants, le nombre de séances et les conditions de remboursement varient selon le contrat souscrit.
+      <span class="emph">Il est recommandé de vérifier directement auprès de votre mutuelle.</span>
+    </p>
+
+    <h2>Mutuelles avec forfait annuel global</h2>
+
+    <div class="table-wrap">
+      <table class="vlines">
+        <colgroup>
+          <col style="width:37%">
+          <col style="width:63%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>MUTUELLES</th>
+            <th>FORFAIT ANNUEL INDICATIF</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row"><td>Alan</td><td>jusqu’à 350 €</td></tr>
+          <tr class="row"><td>Allianz</td><td>jusqu’à 280 €</td></tr>
+          <tr class="row"><td>AXA</td><td>jusqu’à 400 €</td></tr>
+          <tr class="row"><td>MAIF</td><td>jusqu’à 100 €</td></tr>
+          <tr class="row"><td>MGEN</td><td>jusqu’à 500 € à 1 200 € (conditions spécifiques)</td></tr>
+          <tr class="row"><td>Mercer</td><td>jusqu’à 1 200 €</td></tr>
+          <tr class="row"><td>Malakoff Humanis</td><td>selon contrat (jusqu’à 15 séances)</td></tr>
+          <tr class="row"><td>Crédit Agricole (Pacifica)</td><td>env. 150 €</td></tr>
+          <tr class="row"><td><span class="hl">SMENO (étudiant)</span></td><td>0 à 75 € / an selon la formule</td></tr>
+          <tr class="row"><td>SwissLife</td><td>150 à 200 €</td></tr>
+          <tr class="row"><td>Apicil</td><td>selon formule</td></tr>
+          <tr class="row"><td>April</td><td>90 à 225 €</td></tr>
+          <tr class="row"><td>Cegema</td><td>60 à 240 €</td></tr>
+          <tr class="row"><td>Intégrance</td><td>150 à 250 €</td></tr>
+          <tr class="row"><td>UNEO</td><td>env. 120 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="page">
+    <h2 class="p2title">Mutuelles avec remboursement par séance<br/>(plafonné)</h2>
+
+    <div class="table-wrap">
+      <table class="vlines">
+        <colgroup>
+          <col style="width:34%">
+          <col style="width:33%">
+          <col style="width:33%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>MUTUELLES</th>
+            <th>REMBOURSEMENT PAR SEANCE</th>
+            <th>Nombre de séances</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row"><td>AG2R</td><td>~60 €</td><td>jusqu’à 4 / an</td></tr>
+          <tr class="row"><td>Apicil</td><td>30 à 55 €</td><td>3 à 5 / an</td></tr>
+          <tr class="row"><td>AXA</td><td>40 €</td><td>jusqu’à 10 / an</td></tr>
+          <tr class="row"><td>April</td><td>15 à 60 €</td><td>jusqu’à 4 / an</td></tr>
+          <tr class="row"><td>Harmonie Mutuelle</td><td>env. 15 €</td><td>selon contrat</td></tr>
+          <tr class="row"><td><span class="hl">HEYME ( étudiant)</span></td><td>25 €</td><td>jusqu’à 4 / an</td></tr>
+          <tr class="row"><td>Humanis Radiance</td><td>50 %</td><td>selon plafond</td></tr>
+          <tr class="row"><td>Groupe Mutualiste RATP</td><td>20 à 50 €</td><td>selon garantie</td></tr>
+          <tr>
+            <td><span class="hl">LMDE (étudiant)</span></td>
+            <td>
+              Remboursement à<br/>
+              100% de la 1ère<br/>
+              séance puis<br/>
+              40€/séance
+            </td>
+            <td>2 à 10 / an selon la formule</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section class="page">
+    <h2>Cas particuliers/conditions spécifiques</h2>
+
+    <div class="table-wrap">
+      <table class="vlines">
+        <colgroup>
+          <col style="width:37%">
+          <col style="width:63%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>MUTUELLE</th>
+            <th>MODALITES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row"><td>MAAF</td><td>Soutien psychologique en cas d’événement traumatique</td></tr>
+          <tr class="row"><td>MAIF</td><td>Prise en charge suite à accident corporel</td></tr>
+          <tr class="row"><td>Mutuelle de l’Armée de l’Air</td><td>Jusqu’à 10 séances selon option</td></tr>
+          <tr class="row"><td>Audiens</td><td>Jusqu’à 5 séances / an</td></tr>
+          <tr class="row"><td>ASETYS</td><td>Jusqu’à 50 % des consultations</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-block">
+      <div class="info-icon" aria-hidden="true"><span>i</span></div>
+      <div>
+        <p class="info-title">Information importante</p>
+        <p class="info-text">
+          <span class="hlpara">Le remboursement des consultations psychologiques dépend exclusivement de votre contrat individuel ou collectif.</span>
+          <br/><br/>
+          <span class="hlpara">Les consultations ne sont pas remboursées par la Sécurité sociale hors dispositifs spécifiques.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
